@@ -4,12 +4,12 @@ function typeMessage ( message, velocity ) {
         document.body.appendChild (
             document.createElement ( "h3" )
         );
-    container.style = `color: magenta;`
-	
-   	message.split("").reduce((prew, symb) => {
-		setTimeout(()=> console.log(symb),(prew += velocity) * 1000);
-		return prew
-	},velocity)
+    container.style = `color: magenta;`;
+
+    message.split("").reduce((prew, symb) => {
+        setTimeout(()=> container.textContent += symb,(prew += velocity) * 1000);
+        return prew
+    },velocity)
 }
 
-typeMessage ( `Welcome to the hell`, 1 )
+typeMessage ( `Welcome to the hell`, 1 );

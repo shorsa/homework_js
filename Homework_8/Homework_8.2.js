@@ -11,7 +11,7 @@ var typeMessage = (function (velocity) {
         var strArr = message.split('');
         setTimeout(() => {
             if (strArr.length) {
-                document.write(strArr.shift());
+                container.textContent += strArr.shift();
                 arguments.callee(strArr.join(''))
             }
         }, 1000 * velocity)

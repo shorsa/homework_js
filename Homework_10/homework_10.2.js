@@ -1,3 +1,11 @@
+// Допилите код конструктора User, дополнив его акцессорами приватного свойства presence так, чтобы после выполнения скрипта:
+// в консоли было:
+//  "Ivan is absent"
+// а после выполнения кода:
+//   user.presence = "+"
+//   console.info ( user.presence )
+// в консоли было:
+//   "Ivan is present"
 function User(name) {
     this.name = name;
     var presence = false;

@@ -15,4 +15,4 @@ function typeMessage ( message, velocity ) {
 }
 
 typeMessage ( `Welcome to the hell`, 1 );
-//Знаю что reduce для этого не предназначен, это чисто для того что бы потренироваться
+//Знаю что reduce для этого не очень, лучше forEach, это чисто для того что бы потренироваться

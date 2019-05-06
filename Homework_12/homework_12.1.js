@@ -12,7 +12,7 @@ let practiceGetSet = {
 			item => { return {[item.split('=')[0]] : item.split('=')[1]} }
 		).forEach(
 			item => Object.assign(this.res, item)
- 		)
+ 		);
 		if( 'date' in this.res){
 
 		document.body.appendChild(document.createElement('div'))
@@ -22,11 +22,14 @@ let practiceGetSet = {
 
 	},
 	set addCookies(obj){
-		let arrCoocie = Object.entries(obj)
+		let arrCookie = Object.entries(obj);
 		let arr =[];
-		arrCoocie.forEach(item => arr.push(`${item[0]}=${item[1]}; `))
+		arrCookie.forEach(item =>
+			arr.push(`${item[0]}=${item[1]}; `)
+		);
 		document.cookie = arr.join('')
 	}
-}
+};
 
-document.cookie ? practiceGetSet.getCookies : practiceGetSet.addCookies = {date : new Date().toLocaleDateString() } ;
+document.cookie ? practiceGetSet.getCookies :
+	practiceGetSet.addCookies = {date : new Date().toLocaleDateString() } ;
